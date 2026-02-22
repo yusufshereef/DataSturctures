@@ -2,7 +2,7 @@ package heaps;
 
 public class Heap {
     private int[] a;
-    private int capacity;
+    private final int capacity;
     private int size;
 
     public Heap(int capacity){
@@ -51,11 +51,41 @@ public class Heap {
         if(size == 0){
             throw new Exception("heap is empty");
         }
-        int element = a[size-1];
-
-
-
+        int element = a[0];
+        int lastElement = a[size-1];
+        size--;
+        if(size != 0){
+            a[0] = lastElement;
+            downHeap(0);
+        }
         return element;
     }
 
+    private void downHeap(int index){
+        int minIndex = index;
+        int lIndex = leftIndex(index);
+        int rIndex = rightIndex(index);
+
+        if(lIndex < size && a[lIndex]<a[index]){
+            minIndex = lIndex;
+        }
+        if(rIndex < size && a[rIndex]<a[index]){
+            minIndex = rIndex;
+        }
+
+        if(minIndex != index){
+            swap(minIndex, index);
+            downHeap(minIndex);
+        }
+    }
+
+    public void display(){
+        if(size == 0) {
+            System.out.println("heap is empty");
+            return;
+        }
+        for(int i=0; i<size; i++){
+            System.out.print(a[i] + " ");
+        }
+    }
 }
