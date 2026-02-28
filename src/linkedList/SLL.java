@@ -33,15 +33,15 @@ public class SLL {
         }while(ch != 0);
     }
 
-    public void insert(int data, int index){
+    public void insertAtPos(int data, int pos){
         Node node = new Node(data);
-        if(index == 0){
+        if(pos == 1){
             node.next=head;
             head = node;
         }
         else{
             Node temp = head;
-            for(int i=0; i<index-1; i++){
+            for(int i=1; i<pos-1; i++){
                 temp=temp.next;
                 if(temp==null){
                     break;
