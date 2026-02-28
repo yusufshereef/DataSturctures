@@ -21,7 +21,7 @@ public class HeapMain {
 //        for(int ele : a){
 //            System.out.print(ele+" ");
 //        }
-        h.heapSortDescending(a, size);
+        h.heapSortAscendingOrder(a, size);
         for(int ele : a){
             System.out.print(ele + " ");
         }

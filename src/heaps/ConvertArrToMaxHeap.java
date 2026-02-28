@@ -24,7 +24,7 @@ public class ConvertArrToMaxHeap {
         a[j/2] = key;
     }
 
-    public void heapSortDescending(int[] a, int size){
+    public void heapSortAscendingOrder(int[] a, int size){
         //construct initial max heap
         heapify(a, size);
         //swap root node (max ele) with last leaf node and adjust wrt to root node
