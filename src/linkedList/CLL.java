@@ -20,11 +20,11 @@ public class CLL {
             node.next = node;
         }
         else {
-            node.next = head;
             Node temp = head;
             while(temp.next != head){
                 temp = temp.next;
             }
+            node.next = head;
             temp.next = node;
             head = node;
         }
