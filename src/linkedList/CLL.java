@@ -82,6 +82,66 @@ public class CLL {
         }
     }
 
+    public void deleteAtHead(){
+        if(head == null){
+            System.out.println("ll is empty");
+        }
+        else if(head.next == head){
+            head = null;
+        }else{
+            Node temp = head;
+            while(temp.next != head){
+                temp = temp.next;
+            }
+            head = head.next;
+            temp.next = head;
+        }
+    }
+
+    public void deleteAtEnd(){
+        if(head == null){
+            System.out.println("ll is empty");
+        }
+        else if(head.next == head){
+            head = null;
+        }else{
+            Node temp = head;
+            while(temp.next.next !=head){
+                temp=temp.next;
+            }
+            temp.next = head;
+        }
+    }
+
+    public void deleteData(int data){
+        if(head == null){
+            System.out.println("ll is empty");
+        }
+        else if(head.data == data){
+            if(head.next == head){
+                head = null;
+            }else{
+                Node temp = head;
+                while(temp.next != head){
+                    temp = temp.next;
+                }
+                head = head.next;
+                temp.next=head;
+            }
+        }else{
+            Node temp = head;
+            while(temp.next.data != data){
+                temp = temp.next;
+                if(temp.next == head){
+                    System.out.println("data not found");
+                    return;
+                }
+            }
+            temp.next = temp.next.next;
+        }
+    }
+
+
     public void display(){
         if(head == null){
             System.out.println("ll is empty");
