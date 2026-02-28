@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class DLL {
     private class Node {
-        Node prev;
-        int data;
-        Node next;
+        private Node prev;
+        private int data;
+        private Node next;
 
         private Node(int data) {
             this.prev = null;

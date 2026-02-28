@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class SLL {
     private class Node {
-        int data;
-        Node next;
+        private int data;
+        private Node next;
         private Node(int data) {
             this.data = data;
             this.next = null;
