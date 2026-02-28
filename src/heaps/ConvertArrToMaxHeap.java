@@ -2,6 +2,9 @@ package heaps;
 
 public class ConvertArrToMaxHeap {
     public void heapify(int[] a, int size){
+        //laast parent node = size/2
+        //so call adjust method from last parent node and go on till root node
+        // so each parent is balanced
         for(int i=size/2; i>0; i--){
             adjust(a, i, size);
         }
@@ -28,7 +31,7 @@ public class ConvertArrToMaxHeap {
         //construct initial max heap
         heapify(a, size);
         //swap root node (max ele) with last leaf node and adjust wrt to root node
-        // doing this for ntimes makes the array sorted in ascending order
+        // doing this for n times makes the array sorted in ascending order
         int n = a.length-1;
         for(int i=0; i<n; i++){
             //swap root node with last node
