@@ -40,19 +40,21 @@ public class SLL {
             head = node;
         }
         else{
+            //if pos >= 2
+            if(head == null){
+                System.out.println("invalid pos");
+                return;
+            }
             Node temp = head;
             for(int i=1; i<pos-1; i++){
                 temp=temp.next;
                 if(temp==null){
-                    break;
+                    System.out.println("invalid pos");
+                    return;
                 }
             }
-            if(temp!=null){
-                node.next = temp.next;
-                temp.next = node;
-            }else{
-                System.out.println("invalid index");
-            }
+            node.next = temp.next;
+            temp.next = node;
         }
     }
 

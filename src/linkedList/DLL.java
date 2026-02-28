@@ -77,20 +77,17 @@ public class DLL {
             Node temp = head;
             for(int i=1; i<pos-1; i++){
                 temp=temp.next;
-                if(temp == null){
-                    break;
+                if(temp == null) {
+                    System.out.println("invalid pos");
+                    return;
                 }
             }
-            if(temp == null) {
-                System.out.println("invalid pos");
-                return;
-            }
-            if(temp.next!=null){
-                node.next = temp.next;
-                temp.next.prev = node;
-            }
-            node.prev = temp;
+            node.next = temp.next;
             temp.next = node;
+            node.prev = temp;
+            if(node.next != null){
+                node.next.prev = node;
+            }
         }
     }
 
