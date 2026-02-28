@@ -13,5 +13,15 @@ public class LLMain {
 //        DLL l = new DLL();
 //        l.create();
 //        l.display();
+
+        CLL l = new CLL();
+        l.insertAtHead(10);
+        l.insertAtHead(20);
+        l.insertAtHead(30);
+        l.insertAtEnd(40);
+        l.insertAtEnd(15);
+        l.display();
+        l.insertAtPos(35, 7);
+        l.display();
     }
 }
