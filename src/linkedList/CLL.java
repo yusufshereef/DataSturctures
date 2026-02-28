@@ -19,11 +19,6 @@ public class CLL {
             head = node;
             node.next = node;
         }
-        else if(head.next == head){
-            node.next = head;
-            head.next = node;
-            head = node;
-        }
         else {
             node.next = head;
             Node temp = head;
