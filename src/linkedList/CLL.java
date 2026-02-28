@@ -55,7 +55,7 @@ public class CLL {
                 head = node;
             }else{
                 Node temp = head;
-                while(temp.next == head){
+                while(temp.next != head){
                     temp = temp.next;
                 }
                 node.next = head;
