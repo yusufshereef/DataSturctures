@@ -16,9 +16,14 @@ public class HeapMain {
         //size = a.length-1;
         //elements are from 1 to size
         int a[] = {0, 10, 20, 15, 40, 50, 100, 25, 45, 5, 35};
-        h.heapify(a, a.length-1);
+        int size = a.length-1;
+//        h.heapify(a, size);
+//        for(int ele : a){
+//            System.out.print(ele+" ");
+//        }
+        h.heapSortDescending(a, size);
         for(int ele : a){
-            System.out.print(ele+" ");
+            System.out.print(ele + " ");
         }
     }
 }
