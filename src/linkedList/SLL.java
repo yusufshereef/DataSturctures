@@ -6,7 +6,7 @@ public class SLL {
     private class Node {
         int data;
         Node next;
-        Node(int data) {
+        private Node(int data) {
             this.data = data;
             this.next = null;
         }
