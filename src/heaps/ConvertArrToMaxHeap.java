@@ -32,7 +32,7 @@ public class ConvertArrToMaxHeap {
         heapify(a, size);
         //swap root node (max ele) with last leaf node and adjust wrt to root node
         // doing this for n times makes the array sorted in ascending order
-        int n = a.length-1;
+        int n = size;
         for(int i=0; i<n; i++){
             //swap root node with last node
             int temp = a[1];
