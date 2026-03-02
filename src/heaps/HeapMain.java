@@ -25,5 +25,6 @@ public class HeapMain {
         for(int ele : a){
             System.out.print(ele + " ");
         }
+        System.out.println();
     }
 }
